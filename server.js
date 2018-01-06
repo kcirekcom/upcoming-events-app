@@ -2,7 +2,7 @@
 
 import express from 'express';
 
-const PORT = 'localhost://3000';
+const PORT = 'localhost:3000';
 const app = express();
 
 app.use(express.static(`${__dirname}/build`));
