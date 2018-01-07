@@ -39,20 +39,6 @@ module.exports = {
         test: /\.html$/,
         use: 'html-loader'
       },
-      // {
-      //   test: /\.(woff|ttf|svg|eot).*/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: '[path][name].[hash].[ext]',
-      //   },
-      // },
-      // {
-      //   test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-      //   loader: 'file-loader',
-      //   options: {
-      //     name: '[path][name].[hash].[ext]',
-      //   },
-      // },
       {
         test: /\.scss$/,
         use: [{
