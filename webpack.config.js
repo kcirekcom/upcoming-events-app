@@ -2,11 +2,8 @@
 
 const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
-// const CleanPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let plugins = [
-  new ExtractTextPlugin('bundle.css'),
   new HTMLPlugin({
     template: `${__dirname}/src/index.html`
   }),
@@ -28,34 +25,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.jsx?/,
+        test: /.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env', 'react'],
+            plugins: ['transform-class-properties']
+          }
+        }
       },
       {
         test: /\.html$/,
         use: 'html-loader'
       },
       {
-        test: /\.(woff|ttf|svg|eot).*/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
-      },
-      {
-        test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[hash].[ext]',
-        },
-      },
-      {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!resolve-url-loader!sass-loader?sourceMap',
-        })
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader"
+        }, {
+            loader: "sass-loader"
+        }]
       }
     ]
   }
