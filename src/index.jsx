@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import queryString from 'query-string';
 import Header from './components/Header.jsx';
+import EventList from './components/EventList.jsx';
 
 import './scss/main.scss';
 
@@ -29,11 +30,10 @@ class App extends Component {
     return (
       <div>
         <Header artist={this.state.artist}/>
+        <EventList artist={this.state.artist}/>
       </div>
     );
   }
 }
 
 render(<App />, document.getElementById('root'));
-{/* <EventList artist={this.state.artist}/>
-<SearchForArtist data={this.state.data}/> */}
