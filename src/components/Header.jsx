@@ -16,7 +16,6 @@ export default class Header extends Component {
     fetch(`https://rest.bandsintown.com/artists/${artist}?app_id=bit_challenge`).then(response => {
       return response.json();
     }).then(data => {
-      console.log(data);
       this.setState({
         data: data
       });
