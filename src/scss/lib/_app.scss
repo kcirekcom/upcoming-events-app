@@ -5,6 +5,13 @@ body {
   width: 80%;
   margin: 0 auto;
 
+  .instructions {
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: $gray;
+  }
+
   @media (max-width: 480px) {
     width: 100%;
   }

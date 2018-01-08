@@ -1,8 +1,5 @@
 .no-events {
-  margin-top: 6rem;
-  text-align: center;
-  font-size: 1.25rem;
-  color: $gray;
+  @extend .instructions;
 }
 
 .event-list-item {
