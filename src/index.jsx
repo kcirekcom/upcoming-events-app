@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     if (!this.state.artist) {
       return (
-        <div>Please use the following URL structure: localhost:3000/?artist=Maroon 5</div>
+        <div className="instructions">Please use the following URL structure: localhost:8080/?artist=Maroon 5</div>
       )
     }
 

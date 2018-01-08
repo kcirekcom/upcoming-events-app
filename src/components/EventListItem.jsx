@@ -27,10 +27,12 @@ export default class EventListItem extends Component {
 
   render() {
     return (
-      <div>
-        <span>{moment(this.props.event.datetime).format('MMM D')}</span>
-        <span>{this.props.event.venue.name}</span>
-        {this.renderLocation()}
+      <div className="event-list-item">
+        <div className="event-info">
+          <span>{moment(this.props.event.datetime).format('MMM D')}</span>
+          <span>{this.props.event.venue.name}</span>
+          {this.renderLocation()}
+        </div>
         {this.renderOffers()}
       </div>
     );
