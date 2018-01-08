@@ -1,0 +1,11 @@
+body {
+  font-family: $primary-font;
+  font-size: $font-std;
+
+  width: 80%;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
