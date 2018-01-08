@@ -10,7 +10,7 @@ This application allows you to view upcoming events for an artist or band by ent
 
 2. Run `npm i` to install all of the necessary dependencies from the package.json file
 
-3. Run the `npm run start` script and the application will compile and automatically open in your browser on localhost:8080.
+3. Run the `npm run start` script and webpack-dev-server will compile the application and automatically open it in your browser on localhost:8080
 
 ## Use:
 
