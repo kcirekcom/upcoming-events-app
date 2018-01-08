@@ -5,7 +5,7 @@ This application allows you to view upcoming events for an artist or band by ent
 ## Setup:
 
 1. Clone this repository onto your local machine
-    - Copy the download link and run `git clone *download link*` in your terminal
+    - Copy the download link and run <code>git clone <em>download link</em></code> in your terminal
     - i.e. `git clone https://github.com/kcirekcom/upcoming-events-app.git`
 
 2. Run `npm i` to install all of the necessary dependencies from the package.json file
