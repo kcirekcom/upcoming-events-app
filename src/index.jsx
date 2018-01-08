@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   getArtistName = () => {
-    return queryString.parse(location.search).artist;
+    return queryString.parse(location.search).artist.replace(/\s+/g, ' ').trim();
   }
 
   render() {
