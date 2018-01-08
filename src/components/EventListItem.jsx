@@ -6,7 +6,7 @@ import moment from 'moment';
 export default class EventListItem extends Component {
   renderOffers = () => {
     if (this.props.event.offers.length == 0) return null;
-    return <a href={this.props.event.offers[0].url}>Tickets</a>;
+    return <a href={this.props.event.offers[0].url} className="tickets-button">Tickets</a>;
   }
 
   renderLocation = () => {
