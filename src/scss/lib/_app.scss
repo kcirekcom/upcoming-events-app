@@ -21,6 +21,26 @@ body {
     }
   }
 
+  .input {
+    width: 300px;
+    border: none;
+    font-size: 1.25rem;
+    text-align: center;
+    color: $gray;
+
+    &:focus,
+    &:active {
+      color: $white;
+      outline: none;
+      background: rgba(37,153,152, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    &::selection {
+      background: none;
+    }
+  }
+
   .copy {
     width: 85%;
     
@@ -32,6 +52,11 @@ body {
       background: rgba(37,153,152, 0.6);
       transition: all 0.3s ease;
     }
+  }
+
+  .copied {
+    display: none;
+    padding-top: 1rem;
   }
 
   .circle {
@@ -51,17 +76,23 @@ body {
     &:hover,
     &:focus {
       cursor: pointer;
-      background: $primary-color;
       box-shadow: none;
+      outline: none;
+      background: $white;
+      color: $primary-color;
+      box-shadow: 0px 0px 10px rgba(37,153,152, 0.8);
     }
-  }
 
-  .input {
-    width: 300px;
-    border: none;
-    font-size: 1.25rem;
-    text-align: center;
-    color: $gray;
+    &:active {
+      color: $white;
+      background: $primary-color;
+    }
+
+    &:active + .copied {
+      display: block;
+      color: $primary-color;
+      font-weight: 500;
+    }
   }
 
   @media (max-width: 768px) {
