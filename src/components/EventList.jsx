@@ -32,14 +32,14 @@ export default class EventList extends Component {
   render() {
     if (this.state.data == null || this.state.data.length == 0) {
       return (
-        <div className="no-events">No upcoming events.</div>
+        <div className='no-events'>No upcoming events.</div>
       )
     }
 
     var events = this.state.data.map((d, i) => <EventListItem event={d} key={i}/>);
 
     return (
-      <div className="event-list">
+      <div className='event-list'>
         {events}
       </div>
     );
