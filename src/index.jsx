@@ -42,7 +42,8 @@ class App extends Component {
         <div className='instructions'>
           <p className='copy'>Please use the following URL structure in the address bar: <input type='text' className='input' id='inputURL' value='localhost:8080/?artist=Maroon5'/></p>
           <p>Click on the button below to copy the URL structure.</p>
-          <div className='circle' onClick={this.copyToClipboard} tabIndex='0'><span>+</span></div>
+          <div className='circle' role='button' onClick={this.copyToClipboard} aria-label='Copy to clipboard'tabIndex='0'><span>+</span></div>
+          <p className='copied'>Copied!</p>
         </div>
       )
     }
