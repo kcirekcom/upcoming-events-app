@@ -10,6 +10,58 @@ body {
     text-align: center;
     font-size: 1.25rem;
     color: $gray;
+
+    p {
+      margin: 0 auto 1rem;
+
+      &:nth-child(2) {
+        font-size: 1rem;
+        width: 60%;
+      }
+    }
+  }
+
+  .copy {
+    width: 85%;
+    
+    box-sizing: border-box;
+    border-bottom: 10px solid $primary-color;
+
+    &:hover .input {
+      color: $white;
+      background: rgba(37,153,152, 0.6);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .circle {
+    margin: 0 auto;
+    font-size: $font-std;
+    color: $white;
+    background: $gray;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: $primary-color;
+      box-shadow: none;
+    }
+  }
+
+  .input {
+    width: 300px;
+    border: none;
+    font-size: 1.25rem;
+    text-align: center;
+    color: $gray;
   }
 
   @media (max-width: 768px) {

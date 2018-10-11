@@ -36,9 +36,9 @@ export default class Header extends Component {
     }
 
     return (
-      <div className="header-content">
-        <img src={this.state.data.thumb_url} width="80" alt={this.state.data.name}/>
-        <div className="header-text-container">
+      <div className='header-content'>
+        <img src={this.state.data.thumb_url} width='80' alt={this.state.data.name}/>
+        <div className='header-text-container'>
           <h1>{this.state.data.name}</h1>
           <h2>Upcoming Events</h2>
         </div>

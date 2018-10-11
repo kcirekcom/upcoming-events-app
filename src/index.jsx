@@ -17,13 +17,33 @@ class App extends Component {
   }
 
   getArtistName = () => {
-    return queryString.parse(location.search).artist.replace(/\s+/g, ' ').trim();
+    let artist = queryString.parse(location.search).artist;
+
+    if (artist !== undefined && artist !== null) {
+      return artist.replace(/\s+/g, ' ').trim();
+    }
+  }
+
+  copyToClipboard = () => {
+    var copyText = document.getElementById('inputURL');
+    let value = copyText.value;
+
+    if (!navigator.clipboard) {
+      copyText.select();
+      document.execCommand('copy');
+    } else {
+      navigator.clipboard.writeText(value);
+    }
   }
 
   render() {
     if (!this.state.artist) {
       return (
-        <div className="instructions">Please use the following URL structure: localhost:8080/?artist=Maroon 5</div>
+        <div className='instructions'>
+          <p className='copy'>Please use the following URL structure in the address bar: <input type='text' className='input' id='inputURL' value='localhost:8080/?artist=Maroon5'/></p>
+          <p>Click on the button below to copy the URL structure.</p>
+          <div className='circle' onClick={this.copyToClipboard} tabIndex='0'><span>+</span></div>
+        </div>
       )
     }
 
