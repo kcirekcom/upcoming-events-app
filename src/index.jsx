@@ -32,6 +32,7 @@ class App extends Component {
       copyText.select();
       document.execCommand('copy');
     } else {
+      copyText.select();
       navigator.clipboard.writeText(value);
     }
   }

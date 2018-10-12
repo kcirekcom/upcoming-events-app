@@ -78,14 +78,15 @@ body {
       cursor: pointer;
       box-shadow: none;
       outline: none;
-      background: $white;
-      color: $primary-color;
-      box-shadow: 0px 0px 10px rgba(37,153,152, 0.8);
+      background: $primary-color;
+      color: $white;
+      box-shadow: none;
     }
-
+    
     &:active {
       color: $white;
       background: $primary-color;
+      box-shadow: inset 0px 2px 5px rgba(0,0,0,0.3);
     }
 
     &:active + .copied {
